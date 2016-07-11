@@ -27,7 +27,8 @@ public class MD5 {
 		// hexadecimais (hexadecimal)
 		ArrayList<String> hexadecimal = new ArrayList<>();
 		for (byte b : messageDigest) {
-			hexadecimal.add(String.format("%02x", 0xFF & b));
+			//Converte cada byte em hexadecimal com 2 casas completadas com zeros a esquerda
+			hexadecimal.add(String.format("%02x", b));
 		}
 		System.out.println("Vetor de saida transformado em Hexadecimal: " + hexadecimal);
 
@@ -35,7 +36,8 @@ public class MD5 {
 		// usado assim
 		StringBuilder hexString = new StringBuilder();
 		for (byte b : messageDigest) {
-			hexString.append(String.format("%02x", 0xFF & b));
+			//Converte cada byte em hexadecimal com 2 casas completadas com zeros a esquerda
+			hexString.append(String.format("%02x", b));
 		}
 		System.out.println("String hexadecimal: " + hexString.toString());
 	}
@@ -77,7 +79,8 @@ public class MD5 {
 		// hexadecimais (hexadecimal) representado numa string
 		StringBuilder hexString = new StringBuilder();
 		for (byte b : messageDigest) {
-			hexString.append(String.format("%02x", 0xFF & b));
+			//Converte cada byte em hexadecimal com 2 casas completadas com zeros a esquerda
+			hexString.append(String.format("%02x", b));
 		}
 		return hexString.toString();
 	}
